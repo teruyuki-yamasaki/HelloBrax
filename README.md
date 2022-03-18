@@ -10,6 +10,7 @@ from matplotlib.lines import Line2D
 from matplotlib.patches import Circle
 import matplotlib.pyplot as plt
 import numpy as np
+import copy 
 
 try:
   import brax
@@ -98,8 +99,8 @@ plt.xlim([-3, 3])
 plt.ylim([0, 4])
 
 for i in range(100):
-  draw_system(ax, qp.pos[1:], i / 100.)
-  qp, _ = sys.step(qp, [])
+  draw_system(ax, qp.pos[1:], i / 100.)   # ax, pos, alpha
+  qp, _ = sys.step(qp, [])                # qp(t+1) = step(system, qp(t), action) 
 
 plt.title('ball in motion')
 plt.show()
