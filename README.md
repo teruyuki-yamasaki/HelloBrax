@@ -61,3 +61,46 @@ qp_init = brax.QP(
                     [0., 0., 0.]])      # ball
 )
 ```
+
+## Brax Step Function
+```
+def draw_system(ax, pos, alpha=1):
+    for i, p in enumerate(pos):
+        ax.add_patch(Circle(xy=(p[0], p[2]), radius=cap.radius, fill=False, color=(0, 0, 0, alpha)))
+
+    if i < len(pos) - 1: # draw the trajectory 
+        pn = pos[i + 1]
+        ax.add_line(Line2D([p[0], pn[0]], [p[2], pn[2]], color=(1, 0, 0, alpha)))
+
+_, ax = plt.subplots()
+plt.xlim([-3, 3])
+plt.ylim([0, 4])
+
+draw_system(ax, [[0, 0, 0.5]])
+plt.title('ball at rest')
+plt.show()
+```
+
+```
+#@title Simulating the bouncy ball config { run: "auto"}
+bouncy_ball.elasticity = 0 #@param { type:"slider", min: 0, max: 0.95, step:0.05 }
+ball_velocity = 1 #@param { type:"slider", min:-5, max:5, step: 0.5 }
+
+#bouncy_ball.reset() 
+sys = brax.System(bouncy_ball)
+
+# provide an initial velocity to the ball
+qp = copy.deepcopy(qp_init)  #initialize QP, the brax's dynamics state 
+qp.vel[1, 0] = ball_velocity #look at the brax.QP dict==qp_init 
+
+_, ax = plt.subplots()
+plt.xlim([-3, 3])
+plt.ylim([0, 4])
+
+for i in range(100):
+  draw_system(ax, qp.pos[1:], i / 100.)
+  qp, _ = sys.step(qp, [])
+
+plt.title('ball in motion')
+plt.show()
+```
