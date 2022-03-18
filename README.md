@@ -84,8 +84,8 @@ plt.show()
 
 ```
 #@title Simulating the bouncy ball config { run: "auto"}
-bouncy_ball.elasticity = 0 #@param { type:"slider", min: 0, max: 0.95, step:0.05 }
-ball_velocity = 1 #@param { type:"slider", min:-5, max:5, step: 0.5 }
+bouncy_ball.elasticity = 0  #@param { type:"slider", min: 0, max: 0.95, step:0.05 }
+ball_velocity = 1           #@param { type:"slider", min:-5, max:5, step: 0.5 }
 
 #bouncy_ball.reset() 
 sys = brax.System(bouncy_ball)
