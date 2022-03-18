@@ -19,3 +19,24 @@ except ImportError:
   clear_output()
   import brax
 ```
+
+## Brax Config
+```
+#@title A bouncy ball scene
+bouncy_ball = brax.Config(dt=0.05, substeps=4)      # scene
+
+# ground is a frozen (immovable) infinite plane
+ground = bouncy_ball.bodies.add(name='ground')      # add to the scene a body==ground 
+ground.frozen.all = True                            # make the entire body static 
+plane = ground.colliders.add().plane                # add to the body the property of a collider==plane
+plane.SetInParent()  # for setting an empty oneof   # regard the plane as a parent 
+
+# ball weighs 1kg, has equal rotational inertia along all axes, is 1m long, and
+# has an initial rotation of identity (w=1,x=0,y=0,z=0) quaternion
+ball = bouncy_ball.bodies.add(name='ball', mass=1)  # add to the scene a body==ball
+cap = ball.colliders.add().capsule                  # add to the body the property of a collider==capsule 
+cap.radius, cap.length = 0.5, 1                     # this radius-length ratio of capsule makes a ball 
+
+# gravity is -9.8 m/s^2 in z dimension
+bouncy_ball.gravity.z = -9.8                        # add to the scene gravity
+```
