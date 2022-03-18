@@ -40,3 +40,24 @@ cap.radius, cap.length = 0.5, 1                     # this radius-length ratio o
 # gravity is -9.8 m/s^2 in z dimension
 bouncy_ball.gravity.z = -9.8                        # add to the scene gravity
 ```
+
+## Brax State
+```
+qp_init = brax.QP(
+    # position of each body in 3d (z is up, right-hand coordinates)
+    pos = np.array([[0., 0., 0.],       # ground
+                            [0., 0., 3.]]),     # ball is 3m up in the air
+             
+    # velocity of each body in 3d
+    vel = np.array([[0., 0., 0.],         # ground
+                            [0., 0., 0.]]),     # ball
+             
+    # rotation about center of body, as a quaternion (w, x, y, z)
+    rot = np.array([[1., 0., 0., 0.],     # ground
+                            [1., 0., 0., 0.]]), # ball
+             
+    # angular velocity about center of body in 3d
+    ang = np.array([[0., 0., 0.],       # ground
+                            [0., 0., 0.]])      # ball
+)
+```
