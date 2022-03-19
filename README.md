@@ -22,6 +22,7 @@ except ImportError:
 ```
 
 ## Brax Config
+- system  is the static description of the physical system: each body in the world, its weight and size, and so on
 ```
 #@title A bouncy ball scene
 bouncy_ball = brax.Config(dt=0.05, substeps=4)      # create a scene, here so-called a 'system'
@@ -42,7 +43,6 @@ cap.radius, cap.length = 0.5, 1                     # this radius-length ratio o
 bouncy_ball.gravity.z = -9.8                        # add to the scene gravity
 ```
 
-- system  is the static description of the physical system: each body in the world, its weight and size, and so on
 ```
 print(bounct_ball)
 >>>
