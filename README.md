@@ -173,6 +173,7 @@ qp_init = brax.QP(
 
 
 ## Brax Step Function
+- Brax’s core physics loop
 ```
 #@title Simulating the bouncy ball config { run: "auto"}
 bouncy_ball.elasticity = 0  #@param { type:"slider", min: 0, max: 0.95, step:0.05 }
