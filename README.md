@@ -102,9 +102,11 @@ angle_limit { min: -180 max: 180 }
 
 ```
 import brax.physics.config_pb2 as config_pb2
+
 simple_system = config_pb2.Config()
 simple_system.dt = .01
 simple_system.gravity.z = -9.8
+
 parent_body = simple_system.bodies.add()
 parent_body.name = "Parent"
 parent_body.frozen.position.x, parent_body.frozen.position.y,
@@ -113,16 +115,19 @@ parent_body.frozen.rotation.x, parent_body.frozen.rotation.y,
 parent_body.frozen.rotation.z = 1, 1, 1
 parent_body.mass = 1
 parent_body.inertia.x, parent_body.inertia.y, parent_body.inertia.z = 1, 1, 1
+
 child_body = simple_system.bodies.add()
 child_body.name="Child"
 child_body.mass = 1
 child_body.inertia.x, child_body.inertia.y, child_body.inertia.z = 1, 1, 1
+
 joint = simple_system.joints.add()
 joint.name="Joint"
 joint.parent="Parent"
 joint.child="Child"
 joint.stiffness = 10000
 joint.child_offset.z = 1
+
 joint_limit = joint.angle_limit.add()
 joint_limit.min = 180
 joint_limit.max = 180
