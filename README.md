@@ -132,6 +132,7 @@ joint_limit.max = 180
 ```
 
 ## Brax State
+- qp(t) is the dynamic state of the system at time t: each body's position, rotation, velocity, and angular velocity
 ```
 def draw_system(ax, pos, alpha=1):
     for i, p in enumerate(pos):
