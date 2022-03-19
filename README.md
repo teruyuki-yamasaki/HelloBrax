@@ -179,6 +179,7 @@ bouncy_ball.elasticity = 0  #@param { type:"slider", min: 0, max: 0.95, step:0.0
 ball_velocity = 1           #@param { type:"slider", min:-5, max:5, step: 0.5 }
 
 #bouncy_ball.reset() 
+bouncy_ball.dynamics_mode  = "legacy_spring" #!!!
 sys = brax.System(bouncy_ball)
 
 # provide an initial velocity to the ball
@@ -197,6 +198,123 @@ plt.title('ball in motion')
 plt.show()
 ```
 <img src='https://github.com/teruyuki-yamasaki/HelloBrax/blob/main/images/bouncy_ball_in_motion.png'>
+
+## Joints
+Joints constrain the motion of bodies so that they move in tandem:
+```
+#@title A pendulum config for Brax
+pendulum = brax.Config(dt=0.01, substeps=4)                     # create a  scene
+pendulum.gravity.z = -9.8                                                    # add to the scene gravity==-9.8 m/s^2 in z dimension
+pendulum.dynamics_mode  = "legacy_spring"
+
+# start with a frozen anchor at the root of the pendulum
+anchor = pendulum.bodies.add(name='anchor', mass=1.0)   # add to the scene a body==anchor
+anchor.frozen.all = True                                                      # make the body static 
+
+if 0:
+    system = brax.Config(dt=0.01,substeps=4); system.gravity.z=-9.8
+    ball = system.bodies.add(name='ball', mass=1)
+    cap = ball.colliders.add().capsule
+    cap.radius, cap.length = 0.5, 1
+
+# now add a middle and bottom ball to the pendulum
+pendulum.bodies.append(ball)                    # add to the scene a body==ball 1
+pendulum.bodies.append(ball)                    # add to the scene a body==ball 2
+pendulum.bodies[1].name = 'middle'              # name the body 1 as middle 
+pendulum.bodies[2].name = 'bottom'              # name the body 2 as bottom 
+
+# connect anchor to middle                          # add to the body a joint==joint 1
+joint = pendulum.joints.add(
+    name='joint1', 
+    parent='anchor',
+    child='middle', 
+    stiffness=10000, 
+    angular_damping=20)
+joint.angle_limit.add(min = -180, max = 180)
+joint.child_offset.z = 1.5
+joint.rotation.z = 90
+
+# connect middle to bottom
+pendulum.joints.append(joint)
+pendulum.joints[1].name = 'joint2'
+pendulum.joints[1].parent = 'middle'
+pendulum.joints[1].child = 'bottom'
+```
+
+```
+print(pendulum)
+>>>
+bodies {
+  name: "anchor"
+  mass: 1.0
+  frozen {
+    all: true
+  }
+}
+bodies {
+  name: "middle"
+  colliders {
+    capsule {
+      radius: 0.5
+      length: 1.0
+    }
+  }
+  mass: 1.0
+}
+bodies {
+  name: "bottom"
+  colliders {
+    capsule {
+      radius: 0.5
+      length: 1.0
+    }
+  }
+  mass: 1.0
+}
+joints {
+  name: "joint1"
+  stiffness: 10000.0
+  parent: "anchor"
+  child: "middle"
+  child_offset {
+    z: 1.5
+  }
+  rotation {
+    z: 90.0
+  }
+  angular_damping: 20.0
+  angle_limit {
+    min: -180.0
+    max: 180.0
+  }
+}
+joints {
+  name: "joint2"
+  stiffness: 10000.0
+  parent: "middle"
+  child: "bottom"
+  child_offset {
+    z: 1.5
+  }
+  rotation {
+    z: 90.0
+  }
+  angular_damping: 20.0
+  angle_limit {
+    min: -180.0
+    max: 180.0
+  }
+}
+gravity {
+  z: -9.800000190734863
+}
+dt: 0.009999999776482582
+substeps: 4
+dynamics_mode: "legacy_spring"
+```
+
+Here is our system at rest:
+
 
 ## References
 - C. Daniel Freeman, Erik Frey, Anton Raichuk, Sertan Girgin, Igor Mordatch, Olivier Bachem. Brax -- A Differentiable Physics Engine for Large Scale Rigid Body Simulation. [arXiv:2106.13281, 2021](https://arxiv.org/abs/2106.13281).
