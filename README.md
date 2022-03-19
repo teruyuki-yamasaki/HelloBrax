@@ -133,6 +133,27 @@ joint_limit.max = 180
 
 ## Brax State
 ```
+def draw_system(ax, pos, alpha=1):
+    for i, p in enumerate(pos):
+        ax.add_patch(Circle(xy=(p[0], p[2]), radius=cap.radius, fill=False, color=(0, 0, 0, alpha)))
+
+    if i < len(pos) - 1: # draw the trajectory 
+        pn = pos[i + 1]
+        ax.add_line(Line2D([p[0], pn[0]], [p[2], pn[2]], color=(1, 0, 0, alpha)))
+
+_, ax = plt.subplots()
+plt.xlim([-3, 3])
+plt.ylim([0, 4])
+
+draw_system(ax, [[0, 0, 0.5]])
+plt.title('ball at rest')
+plt.show()
+```
+<img src='https://github.com/teruyuki-yamasaki/HelloBrax/blob/main/images/bouncy_ball_static.png'>
+
+## Brax Step Function
+
+```
 qp_init = brax.QP(
     # position of each body in 3d (z is up, right-hand coordinates)
     pos = np.array([[0., 0., 0.],       # ground
@@ -150,25 +171,6 @@ qp_init = brax.QP(
     ang = np.array([[0., 0., 0.],       # ground
                     [0., 0., 0.]])      # ball
 )
-```
-
-## Brax Step Function
-```
-def draw_system(ax, pos, alpha=1):
-    for i, p in enumerate(pos):
-        ax.add_patch(Circle(xy=(p[0], p[2]), radius=cap.radius, fill=False, color=(0, 0, 0, alpha)))
-
-    if i < len(pos) - 1: # draw the trajectory 
-        pn = pos[i + 1]
-        ax.add_line(Line2D([p[0], pn[0]], [p[2], pn[2]], color=(1, 0, 0, alpha)))
-
-_, ax = plt.subplots()
-plt.xlim([-3, 3])
-plt.ylim([0, 4])
-
-draw_system(ax, [[0, 0, 0.5]])
-plt.title('ball at rest')
-plt.show()
 ```
 
 ```
