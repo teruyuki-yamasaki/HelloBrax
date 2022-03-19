@@ -80,23 +80,23 @@ substeps: 1
 dt: .01
 gravity { z: -9.8 }
 bodies {
-name: "Parent"
-frozen { position { x: 1 y: 1 z: 1 } rotation { x: 1 y: 1 z: 1 } }
-mass: 1
-inertia { x: 1 y: 1 z: 1 }
+  name: "Parent"
+  frozen { position { x: 1 y: 1 z: 1 } rotation { x: 1 y: 1 z: 1 } }
+  mass: 1
+  inertia { x: 1 y: 1 z: 1 }
 }
 bodies {
-name: "Child"
-mass: 1
-inertia { x: 1 y: 1 z: 1 }
+  name: "Child"
+  mass: 1
+  inertia { x: 1 y: 1 z: 1 }
 }
 joints {
-name: "Joint"
-parent: "Parent"
-child: "Child"
-stiffness: 10000
-child_offset { z: 1 }
-angle_limit { min: -180 max: 180 }
+  name: "Joint"
+  parent: "Parent"
+  child: "Child"
+  stiffness: 10000
+  child_offset { z: 1 }
+  angle_limit { min: -180 max: 180 }
 }
 ```
 
