@@ -314,7 +314,64 @@ dynamics_mode: "legacy_spring"
 ```
 
 Here is our system at rest:
+```
+_, ax = plt.subplots()
+plt.xlim([-3, 3])
+plt.ylim([0, 4])
 
+# rather than building our own qp like last time, we ask brax.System to
+# generate a default one for us, which is handy
+qp = brax.System(pendulum).default_qp()
+
+draw_system(ax, qp.pos)
+plt.title('pendulum at rest')
+plt.show()
+
+print(pendulum)
+>>>
+QP(pos=array([
+       [0. , 0. , 3.5],
+       [0. , 0. , 2. ],
+       [0. , 0. , 0.5]
+       ]),
+   rot=array([
+       [1., 0., 0., 0.],
+       [1., 0., 0., 0.],
+       [1., 0., 0., 0.]
+       ]), 
+   vel=array([
+       [0., 0., 0.],
+       [0., 0., 0.],
+       [0., 0., 0.]
+       ]),
+   ang=array([
+       [0., 0., 0.],
+       [0., 0., 0.],
+       [0., 0., 0.]
+       ]))
+```
+Let's observe  step(config,qp𝑡)  by smacking the bottom ball with an initial impulse, simulating a pendulum swing.
+```
+#@title Simulating the pendulum config { run: "auto"}
+ball_impulse = 8 #@param { type:"slider", min:-15, max:15, step: 0.5 }
+
+sys = brax.System(pendulum)
+qp = sys.default_qp()
+
+# provide an initial velocity to the ball
+qp.vel[2, 0] = ball_impulse
+
+_, ax = plt.subplots()
+plt.xlim([-3, 3])
+plt.ylim([0, 4])
+
+for i in range(50):
+  draw_system(ax, qp.pos, i / 50.)
+  qp, _ = sys.step(qp, [])
+
+plt.title('pendulum in motion')
+plt.show()
+```
 
 ## References
 - C. Daniel Freeman, Erik Frey, Anton Raichuk, Sertan Girgin, Igor Mordatch, Olivier Bachem. Brax -- A Differentiable Physics Engine for Large Scale Rigid Body Simulation. [arXiv:2106.13281, 2021](https://arxiv.org/abs/2106.13281).
