@@ -138,4 +138,4 @@ plt.show()
 ```
 
 ## References
-- C. Daniel Freeman, Erik Frey, Anton Raichuk, Sertan Girgin, Igor Mordatch, Olivier Bachem. Brax - A Differentiable Physics Engine for Large Scale Rigid Body Simulation. arXiv:2106.13281, 2021.
+- C. Daniel Freeman, Erik Frey, Anton Raichuk, Sertan Girgin, Igor Mordatch, Olivier Bachem. Brax -- A Differentiable Physics Engine for Large Scale Rigid Body Simulation. [arXiv:2106.13281, 2021](https://arxiv.org/abs/2106.13281).
