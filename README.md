@@ -24,7 +24,7 @@ except ImportError:
 ## Brax Config
 ```
 #@title A bouncy ball scene
-bouncy_ball = brax.Config(dt=0.05, substeps=4)      # scene
+bouncy_ball = brax.Config(dt=0.05, substeps=4)      # create a scene, here so-called a 'system'
 
 # ground is a frozen (immovable) infinite plane
 ground = bouncy_ball.bodies.add(name='ground')      # add to the scene a body==ground 
