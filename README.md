@@ -1,7 +1,7 @@
 # HelloBrax
 
 - [Brax: a differentiable physics engine](https://colab.research.google.com/github/google/brax/blob/main/notebooks/basics.ipynb#scrollTo=ssCOanHc8JH_)
-- (Brax Basics)[https://colab.research.google.com/github/google/brax/blob/main/notebooks/basics.ipynb#scrollTo=SCs5jPVThWQx]
+- [Brax Basics](https://colab.research.google.com/github/google/brax/blob/main/notebooks/basics.ipynb#scrollTo=SCs5jPVThWQx)
 
 
 ## Setup (Colab) 
