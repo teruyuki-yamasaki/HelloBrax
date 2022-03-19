@@ -329,6 +329,7 @@ plt.title('pendulum at rest')
 plt.show()
 ```
 <img src='https://github.com/teruyuki-yamasaki/HelloBrax/blob/main/images/joints_at_rest.png'>
+
 ```
 print(pendulum)
 >>>
@@ -353,6 +354,7 @@ QP(pos=array([
        [0., 0., 0.]
        ]))
 ```
+
 Let's observe  step(config,qp𝑡)  by smacking the bottom ball with an initial impulse, simulating a pendulum swing.
 
 ```
@@ -377,6 +379,43 @@ plt.title('pendulum in motion')
 plt.show()
 ```
 <img src='https://github.com/teruyuki-yamasaki/HelloBrax/blob/main/images/joints_in_motion.png'>
+
+
+## Actuators 
+Actuators provide dynamic input to the system during every physics step. They provide control parameters for users to manipulate the system interactively via the  act  parameter.
+
+```
+#@title A single actuator on the pendulum
+actuated_pendulum = brax.Config()
+actuated_pendulum.CopyFrom(pendulum)
+
+# actuating the joint connecting the anchor and middle
+angle = actuated_pendulum.actuators.add(name='actuator', joint='joint1', strength=100).angle
+angle.SetInParent()  # for setting an empty oneof
+```
+
+Let's observe  step(config,qp𝑡,act)  by raising the middle ball to a desired target angle:
+```
+#@title Simulating the actuated pendulum config { run: "auto"}
+target_angle = 45 #@param { type:"slider", min:-90, max:90, step: 1 }
+
+sys = brax.System(actuated_pendulum)
+qp = sys.default_qp()
+act = np.array([target_angle])
+
+_, ax = plt.subplots()
+plt.xlim([-3, 3])
+plt.ylim([0, 4])
+
+for i in range(100):
+  draw_system(ax, qp.pos, i / 100.)
+  qp, _ = sys.step(qp, act)
+
+plt.title('actuating a pendulum joint')
+plt.show()
+```
+<img src='https://github.com/teruyuki-yamasaki/HelloBrax/blob/main/images/actuators.png'>
+
 
 ## References
 - C. Daniel Freeman, Erik Frey, Anton Raichuk, Sertan Girgin, Igor Mordatch, Olivier Bachem. Brax -- A Differentiable Physics Engine for Large Scale Rigid Body Simulation. [arXiv:2106.13281, 2021](https://arxiv.org/abs/2106.13281).
