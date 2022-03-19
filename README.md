@@ -42,6 +42,36 @@ cap.radius, cap.length = 0.5, 1                     # this radius-length ratio o
 bouncy_ball.gravity.z = -9.8                        # add to the scene gravity
 ```
 
+```
+print(bounct_ball)
+>>>
+bodies {
+  name: "ground"
+  colliders {
+    plane {
+    }
+  }
+  frozen {
+    all: true
+  }
+}
+bodies {
+  name: "ball"
+  colliders {
+    capsule {
+      radius: 0.5
+      length: 1.0
+    }
+  }
+  mass: 1.0
+}
+gravity {
+  z: -9.800000190734863
+}
+dt: 0.05000000074505806
+substeps: 4
+```
+
 ## Brax State
 ```
 qp_init = brax.QP(
