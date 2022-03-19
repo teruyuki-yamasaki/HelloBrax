@@ -326,7 +326,9 @@ qp = brax.System(pendulum).default_qp()
 draw_system(ax, qp.pos)
 plt.title('pendulum at rest')
 plt.show()
-
+```
+<img src='https://github.com/teruyuki-yamasaki/HelloBrax/blob/main/images/joints_at_rest.png'>
+```
 print(pendulum)
 >>>
 QP(pos=array([
@@ -372,6 +374,7 @@ for i in range(50):
 plt.title('pendulum in motion')
 plt.show()
 ```
+<img src='https://github.com/teruyuki-yamasaki/HelloBrax/blob/main/images/joints_in_motion.png'>
 
 ## References
 - C. Daniel Freeman, Erik Frey, Anton Raichuk, Sertan Girgin, Igor Mordatch, Olivier Bachem. Brax -- A Differentiable Physics Engine for Large Scale Rigid Body Simulation. [arXiv:2106.13281, 2021](https://arxiv.org/abs/2106.13281).
