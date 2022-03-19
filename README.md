@@ -196,6 +196,7 @@ for i in range(100):
 plt.title('ball in motion')
 plt.show()
 ```
+<img src='https://github.com/teruyuki-yamasaki/HelloBrax/blob/main/images/bouncy_ball_in_motion.png'>
 
 ## References
 - C. Daniel Freeman, Erik Frey, Anton Raichuk, Sertan Girgin, Igor Mordatch, Olivier Bachem. Brax -- A Differentiable Physics Engine for Large Scale Rigid Body Simulation. [arXiv:2106.13281, 2021](https://arxiv.org/abs/2106.13281).
