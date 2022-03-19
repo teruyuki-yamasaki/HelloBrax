@@ -73,6 +73,33 @@ dt: 0.05000000074505806
 substeps: 4
 ```
 
+A Appendix - Brax System Specification
+In this section, we demonstrate how to construct a Brax scene using the ProtoBuf specification, as well as a short snippet constructing the same scene pythonically.
+```
+substeps: 1
+dt: .01
+gravity { z: -9.8 }
+bodies {
+name: "Parent"
+frozen { position { x: 1 y: 1 z: 1 } rotation { x: 1 y: 1 z: 1 } }
+mass: 1
+inertia { x: 1 y: 1 z: 1 }
+}
+bodies {
+name: "Child"
+mass: 1
+inertia { x: 1 y: 1 z: 1 }
+}
+joints {
+name: "Joint"
+parent: "Parent"
+child: "Child"
+stiffness: 10000
+child_offset { z: 1 }
+angle_limit { min: -180 max: 180 }
+}
+```
+
 ## Brax State
 ```
 qp_init = brax.QP(
