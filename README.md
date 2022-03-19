@@ -109,10 +109,8 @@ simple_system.gravity.z = -9.8
 
 parent_body = simple_system.bodies.add()
 parent_body.name = "Parent"
-parent_body.frozen.position.x, parent_body.frozen.position.y,
-parent_body.frozen.position.z = 1, 1, 1
-parent_body.frozen.rotation.x, parent_body.frozen.rotation.y,
-parent_body.frozen.rotation.z = 1, 1, 1
+parent_body.frozen.position.x, parent_body.frozen.position.y, parent_body.frozen.position.z = 1, 1, 1
+parent_body.frozen.rotation.x, parent_body.frozen.rotation.y, parent_body.frozen.rotation.z = 1, 1, 1
 parent_body.mass = 1
 parent_body.inertia.x, parent_body.inertia.y, parent_body.inertia.z = 1, 1, 1
 
