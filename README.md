@@ -353,6 +353,7 @@ QP(pos=array([
        ]))
 ```
 Let's observe  step(config,qp𝑡)  by smacking the bottom ball with an initial impulse, simulating a pendulum swing.
+
 ```
 #@title Simulating the pendulum config { run: "auto"}
 ball_impulse = 8 #@param { type:"slider", min:-15, max:15, step: 0.5 }
