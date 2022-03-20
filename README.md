@@ -3,6 +3,7 @@
 - [Brax: a differentiable physics engine](https://colab.research.google.com/github/google/brax/blob/main/notebooks/basics.ipynb#scrollTo=ssCOanHc8JH_)
 - [Brax Basics](https://colab.research.google.com/github/google/brax/blob/main/notebooks/basics.ipynb#scrollTo=SCs5jPVThWQx)
 - [Brax Basics note](https://github.com/teruyuki-yamasaki/HelloBrax/blob/main/BraxBasics_plus.ipynb)
+- [JAX入門～高速なNumPyとして使いこなすためのチュートリアル～](https://qiita.com/koshian2/items/44a871386576b4f80aff)
 
 ## Setup (Colab) 
 ```
