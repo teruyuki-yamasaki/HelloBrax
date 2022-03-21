@@ -14,8 +14,9 @@
 
 ## [TrainBrax.ipynb](https://github.com/teruyuki-yamasaki/HelloBrax/blob/main/TrainInBrax.ipynb)
 <p float="left">
-  <img src='https://github.com/teruyuki-yamasaki/HelloBrax/blob/main/images/TrainBrax_fig02.png', width=400>
+  <!--img src='https://github.com/teruyuki-yamasaki/HelloBrax/blob/main/images/TrainBrax_fig02.png', width=400-->
   <img src='https://github.com/teruyuki-yamasaki/HelloBrax/blob/main/images/brax_learned_ant.png', width=300>
+  <img src='https://github.com/teruyuki-yamasaki/HelloBrax/blob/main/images/brax_learned_humanoid.png', width=300>
 </p>
 
 ## References
