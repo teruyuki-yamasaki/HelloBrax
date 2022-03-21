@@ -8,6 +8,8 @@
 
 - [HelloBraxEnv.ipynb](https://github.com/teruyuki-yamasaki/HelloBrax/blob/main/HelloBrax.ipynb)
 
+<img src='https://github.com/teruyuki-yamasaki/HelloBrax/blob/main/images/brax_ant.png'>
+
 
 
 ## References
