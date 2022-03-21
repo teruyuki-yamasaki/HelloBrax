@@ -7,6 +7,11 @@
 <img src='https://github.com/teruyuki-yamasaki/HelloBrax/blob/main/images/HelloBrax_fig01.png'>
 
 - [HelloBraxEnv.ipynb](https://github.com/teruyuki-yamasaki/HelloBrax/blob/main/HelloBrax.ipynb)
+- <p float="left">
+  <img src='https://github.com/teruyuki-yamasaki/HelloBrax/blob/main/images/brax_ant_code.png' width=500> 
+  <img src='https://github.com/teruyuki-yamasaki/HelloBrax/blob/main/images/brax_ant.png' width=250>
+</p>
+
 
 
 ## References
