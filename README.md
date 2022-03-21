@@ -30,9 +30,9 @@
   <img src='https://github.com/teruyuki-yamasaki/HelloBrax/blob/main/images/brax_ant.png' width=250>
 </p>
 
-Comparison                 |  Ant
+A                          |  B
 :-------------------------:|:-------------------------:
-![](https://github.com/teruyuki-yamasaki/HelloBrax/blob/main/images/brax_ant_code.png)  |  ![](https://github.com/teruyuki-yamasaki/HelloBrax/blob/main/images/brax_ant.png)
+![](https://github.com/.../brax_ant_code.png)  |  ![](https://github.com/.../brax_ant.png)
 
 ```
 <p float="left">
