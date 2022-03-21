@@ -32,7 +32,7 @@
 
 A                          |  B
 :-------------------------:|:-------------------------:
-![](https://github.com/.../brax_ant_code.png)  |  ![](https://github.com/.../brax_ant.png)
+![](https://.../A.png)     |  ![](https://.../B.png)
 
 ```
 <p float="left">
