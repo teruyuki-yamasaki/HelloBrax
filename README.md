@@ -24,6 +24,17 @@
 
 ### How to display images side by side 
 [How can one display images side by side in a GitHub README.md?](https://stackoverflow.com/questions/24319505/how-can-one-display-images-side-by-side-in-a-github-readme-md)
+```
+<p float="left">
+  <img src='https://github.com/teruyuki-yamasaki/HelloBrax/blob/main/images/brax_ant_code.png' width=500> 
+  <img src='https://github.com/teruyuki-yamasaki/HelloBrax/blob/main/images/brax_ant.png' width=250>
+</p>
+
+Comparison                 |  Ant
+:-------------------------:|:-------------------------:
+![](https://github.com/teruyuki-yamasaki/HelloBrax/blob/main/images/brax_ant_code.png)  |  ![](https://github.com/teruyuki-yamasaki/HelloBrax/blob/main/images/brax_ant.png)
+
+```
 <p float="left">
   <img src='https://github.com/teruyuki-yamasaki/HelloBrax/blob/main/images/brax_ant_code.png' width=500> 
   <img src='https://github.com/teruyuki-yamasaki/HelloBrax/blob/main/images/brax_ant.png' width=250>
