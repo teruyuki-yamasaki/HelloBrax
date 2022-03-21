@@ -1,6 +1,8 @@
 # HelloBrax
 
 - [HelloJAX.ipynb](https://github.com/teruyuki-yamasaki/HelloBrax/blob/main/HelloJAX.ipynb)
+<img src='https://github.com/teruyuki-yamasaki/HelloBrax/blob/main/images/HelloJAX_fig02.png'>
+
 - [HelloBrax.ipynb](https://github.com/teruyuki-yamasaki/HelloBrax/blob/main/HelloBrax.ipynb)
 - [HelloBraxEnv.ipynb](https://github.com/teruyuki-yamasaki/HelloBrax/blob/main/HelloBrax.ipynb)
 
