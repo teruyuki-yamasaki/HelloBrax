@@ -7,12 +7,12 @@
 <img src='https://github.com/teruyuki-yamasaki/HelloBrax/blob/main/images/HelloBrax_fig01.png'>
 
 - [HelloBraxEnv.ipynb](https://github.com/teruyuki-yamasaki/HelloBrax/blob/main/HelloBrax.ipynb)
-- <p float="left">
+<p float="left">
   <img src='https://github.com/teruyuki-yamasaki/HelloBrax/blob/main/images/brax_ant_code.png' width=500> 
   <img src='https://github.com/teruyuki-yamasaki/HelloBrax/blob/main/images/brax_ant.png' width=250>
 </p>
 
-
+- [TrainBrax.ipynb](https://github.com/teruyuki-yamasaki/HelloBrax/blob/main/TrainBrax.ipynb)
 
 ## References
 - C. Daniel Freeman, Erik Frey, Anton Raichuk, Sertan Girgin, Igor Mordatch, Olivier Bachem. Brax -- A Differentiable Physics Engine for Large Scale Rigid Body Simulation. [arXiv:2106.13281, 2021](https://arxiv.org/abs/2106.13281).
