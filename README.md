@@ -9,7 +9,7 @@
 - [HelloBraxEnv.ipynb](https://github.com/teruyuki-yamasaki/HelloBrax/blob/main/HelloBrax.ipynb)
 <p float="left">
   <img src='https://github.com/teruyuki-yamasaki/HelloBrax/blob/main/images/brax_ant_code.png' width=500> 
-  <img src='https://github.com/teruyuki-yamasaki/HelloBrax/blob/main/images/brax_ant.png' width=700>
+  <img src='https://github.com/teruyuki-yamasaki/HelloBrax/blob/main/images/brax_ant.png' width=400>
 </p>
 
 Comparison                 |  Ant
