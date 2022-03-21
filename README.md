@@ -8,11 +8,11 @@
 
 - [HelloBraxEnv.ipynb](https://github.com/teruyuki-yamasaki/HelloBrax/blob/main/HelloBrax.ipynb)
 <p float="left">
-  <img src='https://github.com/teruyuki-yamasaki/HelloBrax/blob/main/images/brax_ant_code.png'> 
-  <img src='https://github.com/teruyuki-yamasaki/HelloBrax/blob/main/images/brax_ant.png'>
+  <img src='https://github.com/teruyuki-yamasaki/HelloBrax/blob/main/images/brax_ant_code.png' width=100> 
+  <img src='https://github.com/teruyuki-yamasaki/HelloBrax/blob/main/images/brax_ant.png' width=100>
 </p>
 
-Solarized dark             |  Solarized Ocean
+Comparison                 |  Ant
 :-------------------------:|:-------------------------:
 ![](https://github.com/teruyuki-yamasaki/HelloBrax/blob/main/images/brax_ant_code.png)  |  ![](https://github.com/teruyuki-yamasaki/HelloBrax/blob/main/images/brax_ant.png)
 
