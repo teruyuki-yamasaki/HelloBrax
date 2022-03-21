@@ -13,6 +13,10 @@
 </p>
 
 ## [TrainBrax.ipynb](https://github.com/teruyuki-yamasaki/HelloBrax/blob/main/TrainInBrax.ipynb)
+<p float="left">
+  <img src='https://github.com/teruyuki-yamasaki/HelloBrax/blob/main/images/TrainBrax_fig02.png', width=400>
+  <img src='https://github.com/teruyuki-yamasaki/HelloBrax/blob/main/images/brax_learned_ant.png', width=300>
+</p>
 
 ## References
 - C. Daniel Freeman, Erik Frey, Anton Raichuk, Sertan Girgin, Igor Mordatch, Olivier Bachem. Brax -- A Differentiable Physics Engine for Large Scale Rigid Body Simulation. [arXiv:2106.13281, 2021](https://arxiv.org/abs/2106.13281).
