@@ -12,6 +12,10 @@
   <img src='https://github.com/teruyuki-yamasaki/HelloBrax/blob/main/images/brax_ant.png'>
 </p>
 
+Solarized dark             |  Solarized Ocean
+:-------------------------:|:-------------------------:
+![](https://github.com/teruyuki-yamasaki/HelloBrax/blob/main/images/brax_ant_code.png)  |  ![](https://github.com/teruyuki-yamasaki/HelloBrax/blob/main/images/brax_ant.png)
+
 
 
 ## References
