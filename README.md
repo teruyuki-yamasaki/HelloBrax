@@ -4,6 +4,8 @@
 <img src='https://github.com/teruyuki-yamasaki/HelloBrax/blob/main/images/HelloJAX_fig02.png'>
 
 - [HelloBrax.ipynb](https://github.com/teruyuki-yamasaki/HelloBrax/blob/main/HelloBrax.ipynb)
+<img src='https://github.com/teruyuki-yamasaki/HelloBrax/blob/main/images/HelloBrax_fig01.png'>
+
 - [HelloBraxEnv.ipynb](https://github.com/teruyuki-yamasaki/HelloBrax/blob/main/HelloBrax.ipynb)
 
 
