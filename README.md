@@ -24,6 +24,8 @@
 - [Brax: a differentiable physics engine](https://colab.research.google.com/github/google/brax/blob/main/notebooks/basics.ipynb#scrollTo=ssCOanHc8JH_)
 - [Brax Basics](https://colab.research.google.com/github/google/brax/blob/main/notebooks/basics.ipynb#scrollTo=SCs5jPVThWQx)
 
+- [Learn JAX: From Linear Regression to Neural Networks](https://www.kaggle.com/code/truthr/jax-0)
+
 
 ## Appendix 
 
